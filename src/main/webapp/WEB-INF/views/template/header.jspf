@@ -1,0 +1,39 @@
+<div class="art-Header">
+	<div class="art-Header-jpeg"></div>
+	<div class="art-Logo">
+		
+			<div id="wellcomeField">
+				<div id="leftWF" class="roundedCorners">
+					<div class="userIcon" id="userIcon"></div>
+					<div id="inLineLogout">
+						<div class="logoutIcon" id="logoutIcon"></div>
+						<div class="textLogout" id="textLogout">
+							<a href="<c:url value='/j_spring_security_logout'/>" onClick="return confirm('<spring:message code='wellcome.label.confirmLogout'/>')">
+								<span id="txtLogout" ><spring:message code="wellcome.label.logout" /></span>
+							</a>
+							</div>
+					</div>
+				</div>
+				<div id="rightWF">
+					<div class="provideCSS-3 roundedCorners divGradient divShadow" id="wellcomeDiv">
+						<div class="provideCSS-3 roundedCorners divBenvenuto" id="divBenvenuto">
+							<spring:message code="wellcome.label.wellcome"/>:
+						</div>
+						<div class="textUtente" id="textUtente"><security:authentication property="principal.username" /></div>
+						<div id="inLineDate">
+							<div class="dateIcon" id="dateIcon"></div>
+							<div class="textData" id="textData">
+								<script language="JavaScript">
+  									today = new Date();
+  									document.write(today.getDate(),"/",today.getMonth()+1,"/",today.getFullYear());
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- --- END --- Wellcome Field-->
+		
+		<h1 id="name-text" class="art-Logo-name"><a href="#"></a></h1>
+		<div id="slogan-text" class="art-Logo-text"></div>
+	</div>
+</div>

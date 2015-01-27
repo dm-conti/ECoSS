@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow 
+						http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+	<persistence-context />
+
+	<var name="contratto" class="it.obiectivo.ecoss.domain.Istanzautentecpe"/>
+	
+	<!-- PER CONVENZIONE IL PRIMO STATO DELLA LISTA E' QUELLO INIZIALE: 
+		 DOVE INIZIA IL FLUSSO -->
+	<decision-state id="createOrEdit">
+        <if test="id == null" then="createPerson" else="editPerson" />
+    </decision-state>
+
+    <action-state id="createPerson">
+        <evaluate expression="personController.newPerson()"
+                  result="flowScope.person" />
+        <transition to="personForm" />
+    </action-state>
+
+    <action-state id="editPerson">
+        <evaluate expression="personDao.findPersonById(id)"
+            result="flowScope.person" />
+        <transition to="personForm" />
+    </action-state>
+
+    <view-state id="personForm" model="person" view="/person/form">
+        <transition on="save" to="savePerson">
+            <evaluate expression="personDao.save(person)" />
+
+            <evaluate expression="personDao.findPersons()"
+                      result="flowScope.persons" />
+        </transition>
+        <transition on="cancel" to="cancelPerson" bind="false">
+            <evaluate expression="personDao.findPersons()"
+                      result="flowScope.persons" />
+        </transition>
+    </view-state>
+
+    <end-state id="savePerson" view="/person/search" />
+
+    <end-state id="cancelPerson" view="/person/search" />
+	
+	
+	
+	
+	
+	
+	
+	
+	<view-state model="contratto" view="istanzautentecpe/New"
+		id="creaContratto">
+		<transition to="newUtente"></transition>
+	</view-state>
+
+	
+	
+	<view-state id="newUtente">
+		<transition to="getGestAndDist"></transition>
+	</view-state>
+	<view-state id="searchUtente">
+		
+	<transition to="getUtente"></transition>
+	</view-state>
+	
+	<action-state id="getUtente">
+		<transition to="selectCpeAndLicComm"></transition>
+	</action-state>
+	<view-state id="selectCpeAndLicComm">
+		<transition to="getCpeAndLicComm"></transition>
+	</view-state>
+
+	<action-state id="getCpeAndLicComm">
+		<transition to="saveNewContratto"></transition>
+	</action-state>
+	
+	<end-state id="saveNewContratto"></end-state>
+	
+	<action-state id="getGestAndDist">
+		<transition to="selectCpeAndLicComm"></transition>
+	</action-state>
+</flow>

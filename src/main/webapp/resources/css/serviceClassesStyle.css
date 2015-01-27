@@ -1,0 +1,27 @@
+@font-face {
+ font-family: MyCustomFont;
+ src: url("font/cooper_black.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: MyCustomFont;
+ src: url("font/cooper_black.ttf") /* TTF file for CSS3 browsers */
+}
+/*CLASSI DI SERVIZIO*/
+.roundedCorners{
+	behavior: url(../resources/css/PIE.htc);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.divGradient{
+	background: #E3F1FA;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#E3F1FA), to(#0066A6));
+	background: -moz-linear-gradient(#E3F1FA, #0066A6);
+	background: linear-gradient(#E3F1FA, #0066A6);
+	-pie-background: linear-gradient(#E3F1FA, #0066A6);	
+}
+.divShadow{
+	-webkit-box-shadow: #666 0px 2px 3px;
+	-moz-box-shadow: #666 0px 2px 3px;
+	box-shadow: #666 0px 2px 3px;
+}

@@ -1,0 +1,162 @@
+/*START - Classi Servizio*/
+.provideCSS-3{
+	behavior: url(./resources/css/PIE.htc);
+}
+/*END - Classi Servizio*/
+.loginCorners{
+	/*behavior: url(./resources/css/PIE.htc);*/
+	-webkit-border-radius: 6px 60px 6px 60px;
+	-moz-border-radius: 6px 60px 6px 60px;
+	border-radius: 6px 60px 6px 60px;
+}
+.loginGradient{
+	background: #E3F1FA;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#FFFFFF), to(#E3F1FA));
+	background: -moz-linear-gradient(#FFFFFF, #E3F1FA);
+	background: linear-gradient(#FFFFFF, #0066A6);
+	-pie-background: linear-gradient(#FFFFFF, #E3F1FA);	
+}
+.loginShadow{
+	-webkit-box-shadow: #666 0px 2px 3px;
+	-moz-box-shadow: #666 0px 2px 3px;
+	box-shadow: #666 0px 2px 3px;
+}
+
+/* ----------------------------
+	LAYOUT DELLA PAGINA
+-----------------------------*/
+body{ 
+	margin:0; 
+	padding-top:10%;  
+	text-align:center;
+ }
+#wellcomeFirstBlock{
+	display: block;
+}
+#wellcomeSecondBlock{
+	margin-top: 10px;
+	display: block;
+}
+#wellcomeSecondBlock TABLE{
+	border-spacing: 5px 10px;
+    display: inline-block;
+}
+#errorBlock{
+	display: block;
+	color: red;
+    margin-top: 20px;
+    position: relative;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 14px;
+}
+/* ----------------------------
+  FINE - LAYOUT DELLA PAGINA
+-----------------------------*/
+
+
+  
+#mainLoginDiv{ 
+	width:700px; 
+	margin-left:auto; 
+	margin-right:auto; 
+	text-align: left;
+	background-image:url("./images/logo.png");
+	background-repeat:no-repeat;
+	background-position:left top;
+} 
+#divLogin{  
+    background-color: #E3F1FA;
+    color: #0066A6;
+    font: 12px Arial,Helvetica,sans-serif;
+    height: 220px;
+    left: 50px;
+    padding: 15px 40px 0;
+    position: relative;
+    top: 50px;
+    width: 430px !important;
+    width: 540px;
+}
+#divLogin h2 {
+    color: #0066A6;
+    font: bold 44px "Calibri",Arial;
+    margin: 0;
+    padding: 0;
+	text-indent: 10px;
+}
+#divLogin img {
+    color: #0066A6;
+    font: bold 44px "Calibri",Arial;
+    margin: 0;
+    padding: 0;
+	text-indent: 10px;
+	border: none;
+}
+.textFields{
+    font-size: 14px;
+    color: #0066A6;
+	border: 1px solid #0066A6;
+    height: 25px;
+    margin-left: 5px;
+    padding: 0;
+    text-indent: 5px;
+    maxlength: 2048;
+    width: 200px;
+}
+#submitButton{
+    display: inline-block;
+    height: 90px;
+    margin-left: 10px;
+    position: relative;
+    width: 90px;
+    bottom: 0px !important;
+    bottom: 80px;
+    float: right;
+}
+#inputUserId{
+	float:left;
+}
+#inputPassword{
+	float:left;
+}
+#imageLock{  
+	color: #0066A6;
+	font: 12px Arial,Helvetica,sans-serif;
+    height: 50px;
+    width: 50px;
+	position:relative;
+	float:left;
+	background-image:url("./images/lock.png");
+	background-repeat:no-repeat;
+}
+#textUserId{  
+	color: #0066A6;
+    display: inline;
+    float: left;
+    font: 20px Arial,Helvetica,sans-serif;
+    position: relative;
+}
+#textPassword{  
+	color: #0066A6;
+    display: inline;
+    float: left;
+    font: 20px Arial,Helvetica,sans-serif;
+    position: relative;
+}
+
+div.FrmLabel
+{
+    float: Left;
+    width: 100px;
+}
+div.FrmInput
+{
+    text-align: Right;
+    width: 150px;
+}
+div.FrmSubmit
+{
+    text-align: Right;
+    width: 250px;
+    margin: 10px 0px 0px 0px;
+}

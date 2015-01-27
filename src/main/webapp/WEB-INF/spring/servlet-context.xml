@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<!-- Scans the classpath of this application for @Components to deploy as beans -->
+	<context:component-scan base-package="it.obiectivo.ecoss" />
+
+	<!-- Configures the @Controller programming model -->
+	<mvc:annotation-driven />
+	
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources/ directory -->
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Forwards requests to the "/" resource to the "welcome" view -->
+	<mvc:view-controller path="/" view-name="welcome"/>
+	
+	<!-- Configures Handler Interceptors -->
+    <mvc:interceptors>
+        <!-- Changes the locale when a 'locale' request parameter is sent; e.g. /?locale=de -->
+        <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"/>
+    </mvc:interceptors>
+
+    <!-- Application Message Bundle -->
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames" >
+			<list>
+				<value>/WEB-INF/messages/messages</value>
+				<value>/WEB-INF/messages/tables/manager</value>
+				<value>/WEB-INF/messages/tables/sub-manager</value>
+				<value>/WEB-INF/messages/tables/user</value>
+				<value>/WEB-INF/messages/tables/licUte</value>
+				<value>/WEB-INF/messages/tables/vsg</value>
+				<value>/WEB-INF/messages/tables/service</value>
+				<value>/WEB-INF/messages/tables/contract</value>
+				<value>/WEB-INF/messages/details/sub-manager</value>
+				<value>/WEB-INF/messages/global/jqgrid</value>
+				<value>/WEB-INF/messages/global/error</value>
+			</list>
+		</property>
+		<property name="cacheSeconds" value="0" />
+	</bean>
+	
+	<bean name="jsr303Validator" 
+        class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <property name="validationMessageSource" ref="messageSource" />
+    </bean>
+    
+    <!-- Saves a locale change using a cookie -->
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver" />
+
+	<!-- Resolves view names to protected .jsp resources within the /WEB-INF/views directory -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+
+</beans>

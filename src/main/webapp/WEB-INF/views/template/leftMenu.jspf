@@ -1,0 +1,52 @@
+<br />
+<div id="art-UserMenu" class="provideCSS-3 art-Block artBlockCorners">
+<div class="art-Block-body">
+<div id="art-UserMenuHeader"
+	class="provideCSS-3 art-BlockHeader artBlockGradient artBlockCorners">
+
+<div class="art-header-tag-icon">
+<div class="t"><a onclick="ShowHideUsers(); return false;"
+	href="#"><fmt:message key="usersMenu.label.title" /></a></div>
+</div>
+</div>
+<div id="utentiSlidingDiv" class="art-BlockContent">
+<div class="art-BlockContent-body">
+<div class="widget-content">
+<ul>
+	<li><img src="<c:url value="/resources/images/iconContractEnable.png"/>" /><a href="<c:url value="/istanzautentecpe/getAttivi"/>">Attivi (<%=request.getSession().getAttribute("nAttivi")%>)</a></li>
+	<li><img src="<c:url value="/resources/images/iconContractExpiring.png"/>" /><a href="<c:url value="/istanzautentecpe/getSospesi"/>">Sospesi (<%=request.getSession().getAttribute("nSospesi")%>)</a></li>
+	<li><img src="<c:url value="/resources/images/iconContractDisabled.png"/>" /><a href="<c:url value="/istanzautentecpe/getChiusi"/>">Chiusi (<%=request.getSession().getAttribute("nChiusi")%>)</a></li>
+</ul>
+</div>
+<div class="cleared"></div>
+</div>
+</div>
+<div class="cleared"></div>
+</div>
+</div>
+
+<div id="art-SVGMenu" class="provideCSS-3 art-Block artBlockCorners">
+<div class="art-Block-body">
+<div id="art-SVGMenuHeader"
+	class="provideCSS-3 art-BlockHeader artBlockGradient artBlockCorners">
+
+<div class="art-header-tag-icon">
+<div class="t"><a onclick="ShowHideVSG(); return false;" href="#"><fmt:message
+	key="vsgMenu.label.title" /></a></div>
+</div>
+</div>
+<div id="vsgSlidingDiv" class="art-BlockContent">
+<div class="art-BlockContent-body">
+<div class="widget-content">
+<ul>
+	<li><img src="<c:url value="/resources/images/iconVSGEnable.png"/>" /><a href="#"><fmt:message key="vsgMenu.label.item1" /></a></li>
+	<li><img src="<c:url value="/resources/images/iconVSGExpiring.png"/>" /><a href="#"><fmt:message key="vsgMenu.label.item2" /></a></li>
+	<li><img src="<c:url value="/resources/images/iconVSGDisabled.png"/>" /><a	href="#"><fmt:message key="vsgMenu.label.item3" /></a></li>
+</ul>
+</div>
+<div class="cleared"></div>
+</div>
+</div>
+<div class="cleared"></div>
+</div>
+</div>

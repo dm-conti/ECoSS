@@ -1,0 +1,50 @@
+@CHARSET "ISO-8859-1";
+#licenzautentes{
+	width: 160px;
+    height: 150px;
+}
+#boxServicesSelected{
+    width: 160px;
+    height: 150px;
+}
+#row1{
+	display: inline-block;
+    float: left;
+    width: 100%;
+}
+#row1Table{
+	display: inline-block;
+    float: left;
+    margin-left: 5%;
+    margin-top: 20px;
+}
+#row1Table th, #row1Table td {
+    border: medium none;
+    padding: 2px;
+    text-align: left;
+    vertical-align: middle;
+}
+#row1Table #center{
+	width: 30px;
+}
+#row2{
+	width: 100%;
+}
+fieldset { 
+	border:none; 
+	width: 100%;
+}
+label {
+    color: #0066A6;
+    display: block;
+    margin: 15px 0 5px;
+    float: left;
+    display: inline-block;
+}
+input[type="text"], input[type="password"] {
+    padding: 5px;
+    width: 300px;
+    float: left;
+    display: inline-block;
+    margin-left: 30px;
+}

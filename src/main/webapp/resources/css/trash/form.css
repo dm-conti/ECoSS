@@ -1,0 +1,114 @@
+#tabs{
+	
+
+}
+#tabs form p {
+	-moz-border-radius: 5px 5px 5px 5px;
+    -moz-box-shadow: 0 0 3px #AAAAAA;
+    background-color: #EFF6FB;;
+    border: 1px solid #FFFFFF;
+    margin: 5px 0 15px 0;
+    padding: 10px;
+    width: 400px;
+}
+#tabs form p label {
+    color: #666666;
+    float: left;
+    font-weight: bold;
+    line-height: 26px;
+    margin-right: 15px;
+    text-align: right;
+    text-shadow: 1px 1px 1px #FFFFFF;
+    width: 120px;
+}
+#tabs form input:not([type="radio"]), #tabs form textarea, #tabs form select {
+   -moz-border-radius: 3px 3px 3px 3px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+    outline: medium none;
+    padding: 5px;
+    width: 200px
+}
+#tabs form input:focus{
+    -moz-box-shadow:0px 0px 5px #FFFF00;
+    -webkit-box-shadow:0px 0px 5px #FFFF00;
+    box-shadow:0px 0px 3px #aaa;
+    background-color:#FFFEEF;
+    color:#2779AA; 
+}
+#tabs form input:active{ 
+	background-color:#2779AA; 
+}
+
+/* error message */
+.error {
+	height:15px;
+	font-size:11px;
+	border:1px solid #E1E16D;
+	padding:4px 10px;
+	color:red;
+	display:none;
+	
+	behavior: url(PIE.htc);
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0;
+	-webkit-box-shadow:0 0 6px #DDD;
+	-moz-box-shadow:0 0 6px #DDD;
+	box-shadow:0 0 6px #DDD;
+}
+
+.error p {
+	margin:0;		
+}
+span.checked{
+    background:transparent url(../images/checked.png) no-repeat top left;
+    position:absolute;
+    top:0px;
+    left:1px;
+    width:20px;
+    height:20px;
+}
+span.error{
+    background:transparent url(../images/error.png) no-repeat top left;
+    position:absolute;
+    top:0px;
+    left:1px;
+    width:20px;
+    height:20px;
+}
+
+/*Button*/
+#tabs form p.submit{
+    background:none;
+    border:none;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    box-shadow:none;
+}
+#tabs form button {
+	border:none;
+	outline:none;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    display: block;
+    cursor:pointer;
+    margin: 0px auto;
+    clear:both;
+    padding: 7px 25px;
+    text-shadow: 0 1px 1px #777;
+    font-weight:bold;
+    font-family:"Century Gothic", Helvetica, sans-serif;
+    font-size:22px;
+    -moz-box-shadow:0px 0px 3px #aaa;
+    -webkit-box-shadow:0px 0px 3px #aaa;
+    box-shadow:0px 0px 3px #aaa;
+    background:#4797ED;
+}
+#tabs form button:hover {
+    background:#d8d8d8;
+    color:#666;
+    text-shadow:1px 1px 1px #fff;
+}

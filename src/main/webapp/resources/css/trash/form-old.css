@@ -1,0 +1,152 @@
+/* ----------------------------
+STILI DELLE CLASSI DI SERVIZIO
+------------------------------*/
+@font-face {
+ font-family: MyCustomFont;
+ src: url("font/cooper_black.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: MyCustomFont;
+ src: url("font/cooper_black.ttf") /* TTF file for CSS3 browsers */
+}
+/*CLASSI DI SERVIZIO*/
+.formRoundedCorners{
+	behavior: url(PIE.htc);
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+.formGradient{
+	background: #F9FAFB;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#F9FAFB), to(#F2F5F7));
+	background: -moz-linear-gradient(#F9FAFB, #F2F5F7);
+	background: linear-gradient(#F9FAFB, #F2F5F7);
+	-pie-background: linear-gradient(#F9FAFB, #F2F5F7);	
+}
+.divShadow{
+	-webkit-box-shadow: #666 0px 2px 3px;
+	-moz-box-shadow: #666 0px 2px 3px;
+	box-shadow: #666 0px 2px 3px;
+}
+/* form style */
+#inputTable{
+	margin-left: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+#rowButtons{
+	display: block;
+    margin: 20px;
+    text-align: right;
+}
+#titleForm{
+	display: block;
+    margin: 20px;
+    text-align: right;
+}
+#inputTable tr, #inputTable td{
+	border: medium none;
+    text-indent: 5px;
+    vertical-align: middle;
+}
+#SignupForm {
+	padding:15px 20px; 
+	color:#222222;
+	width: 100%;
+	margin:0 auto;
+	position:relative;
+	border: 2px solid #DDDDDD;	
+}
+#SignupForm .formRow{
+	display: block;
+    float: left;
+    width: 100%;
+    text-indent: 20px;
+}
+/* nested fieldset */
+#SignupForm fieldset {
+	border:0;
+	margin:0;
+	padding:0;
+}
+
+/* typography */
+#SignupForm h3 	{ color:#49B4ED; margin-top:0px; }
+#SignupForm p 	{ font-size:11px; }
+
+
+/* input field */
+#SignupForm input {
+    background-color: #FFFFFF;
+    border: 1px solid #444444;
+    color: #222222;
+    font-size: 12px;
+    padding: 5px;
+    float: left;
+    display: inline-block;
+	
+	behavior: url(/PIE.htc);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#SignupForm input:focus 		{ color:#2779AA; background-color:#E3F1FA; }
+#SignupForm input:active 	{ background-color:#2779AA; }
+
+
+/* button */
+#SignupForm button {
+	outline:0;
+	border:1px solid #AED0EA;
+	padding: 5px;
+	color: #2779AA;
+	
+	behavior: url(/PIE.htc);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background: #EFF6FB;
+	background: -webkit-gradient(linear, 0 0, 0 bottom, from(#EFF6FB), to(#DEEDF7));
+	background: -moz-linear-gradient(#EFF6FB, #DEEDF7);
+	background: linear-gradient(#EFF6FB, #DEEDF7);
+	-pie-background: linear-gradient(#EFF6FB, #DEEDF7);
+}
+
+
+/* error message */
+.error {
+	height:15px;
+	font-size:11px;
+	border:1px solid #E1E16D;
+	padding:4px 10px;
+	color:red;
+	display:none;
+	
+	behavior: url(PIE.htc);
+	-webkit-border-radius: 0 4px 4px 0;
+	-moz-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0;
+	-webkit-box-shadow:0 0 6px #DDD;
+	-moz-box-shadow:0 0 6px #DDD;
+	box-shadow:0 0 6px #DDD;
+}
+
+.error p {
+	margin:0;		
+}
+
+/* field label */
+label {
+	display:inline-block;
+	font-size:11px;
+	color:#222222;
+}
+
+#terms label {
+	float:left;
+}
+
+#terms input {
+	margin:0 5px;
+}

@@ -1,0 +1,60 @@
+<div class="art-nav">
+	<ul class="art-menu">
+		<li>
+			<a href="<c:url value="/index" />" class=" active"><span class="l"></span><span class="r"></span><span class="t">Home</span></a>
+		</li>
+		<security:authorize access="hasAnyRole('Admin', 'Gestore', 'Subgestore')">
+		<li>
+			<a href="#"><span class="l"></span><span class="r"></span><span class="t">Nuovo</span></a>
+			<ul>
+                <li><a href="<c:url value="/istanzautentecpe/stepOne" />">Contratto</a></li>
+                <security:authorize access="hasRole('Admin')">
+                	<li><a href="<c:url value="/gestore/New" />">Gestore</a></li>
+                </security:authorize>
+                <security:authorize access="hasAnyRole('Admin', 'Gestore')">
+                	<li><a href="<c:url value="/distributore/New" />">Subgestore</a></li>
+                </security:authorize>
+                <security:authorize access="hasAnyRole('Admin', 'Gestore', 'Subgestore')">
+                	<li><a href="<c:url value="/utente/New" />">Utente</a></li>
+                </security:authorize>
+                <!--  
+                <li><a href="<c:url value="/cpe/New" />">VSG</a></li>
+                -->
+                <li><a href="<c:url value="/licenzautente/New" />">Licenza</a></li>
+			</ul>
+		</li>
+		</security:authorize>
+		<security:authorize access="hasAnyRole('Admin')">
+		<li>
+			<a href="#"><span class="l"></span><span class="r"></span><span class="t">Servizio</span></a>
+            <ul>
+                <li><a href="<c:url value="#" />">Importa utenti</a></li>
+                <li><a href="<c:url value="#" />">Importa VSG</a></li>
+            </ul>
+		</li>
+		</security:authorize>
+		<li>
+			<a href="#"><span class="l"></span><span class="r"></span><span class="t">Ricerca</span></a>
+            <ul>
+                <li><a href="<c:url value="/istanzautentecpe/index" />">Lista Contratti</a></li>
+                <li><a href="<c:url value="/gestore/index" />">Lista Gestori</a></li>
+                <li><a href="<c:url value="/distributore/index" />">Lista Subgestori</a></li>
+                <li><a href="<c:url value="/utente/index" />">Lista Utenti</a></li>
+                <li><a href="<c:url value="/cpe/index" />">Lista VSG</a></li>
+                <li><a href="<c:url value="/licenzautente/index" />">Lista Licenze Utente</a></li>
+            </ul>
+		</li> 
+		<li>
+			<a href="#"><span class="l"></span><span class="r"></span><span class="t">Configura</span></a>
+            <ul>
+                <li><a href="<c:url value="#" />">Link 1</a></li>
+                <li><a href="<c:url value="#" />">Link 2</a></li>
+                <li><a href="<c:url value="#" />">Link 3</a></li>
+            </ul>
+		</li>
+	</ul>
+	<div id="divFlags">
+		<a href="?locale=en" alt="English"><img id="en_flag" alt="English" src="<c:url value='/resources/css/images/en_flag.png'/>"/></a>
+		<a href="?locale=it" alt="Italiano"><img id="it_flag" alt="Italiano" src="<c:url value='/resources/css/images/it_flag.png'/>"/></a>
+	</div>
+</div>

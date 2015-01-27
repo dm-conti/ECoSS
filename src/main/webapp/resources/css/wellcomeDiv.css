@@ -1,0 +1,163 @@
+/* ----------------------------
+STILI DELLE CLASSI DI SERVIZIO
+------------------------------*/
+@font-face {
+ font-family: Cooper Black;
+ src: url("font/cooper_black.eot") /* EOT file for IE */
+}
+@font-face {
+ font-family: Cooper Black;
+ src: url("font/cooper_black.ttf") /* TTF file for CSS3 browsers */
+}
+
+/*START - Classi Servizio*/
+.provideCSS-3{
+	behavior: url(./resources/css/PIE.htc);
+}
+/*END - Classi Servizio*/
+
+
+/*CLASSI DI SERVIZIO*/
+.roundedCorners{
+	/*behavior: url(../resources/css/PIE.htc);*/
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+.divGradient{
+	background: #87B6D9;	
+}
+.divShadow{
+	-webkit-box-shadow: #666 0px 2px 3px;
+	-moz-box-shadow: #666 0px 2px 3px;
+	box-shadow: #666 0px 2px 3px;
+}
+}
+#divLink{
+	vertical-align: middle;
+}
+#divLink span{
+	display: inline-block;
+    margin-left: 40px;
+    margin-top: 60px;
+}
+#divLink img{
+	display: inline-block;
+	float: left;
+}
+
+/* ----------------------------
+STILI DEI COMPONENTI DI WELCOME
+------------------------------*/
+
+/* --- Main Container --- */
+#wellcomeField{
+	width: auto;
+	height: auto;
+	zoom: 1; /* For IE6 */
+	float: right;
+	margin-right: -7px;
+}
+#leftWF{
+	width: 90px;
+	height: 100px;
+	float: left;
+}
+.userIcon{
+	background: url(images/userIcon.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	top: 16px;
+	width: 68px;
+	height: 68px;
+	float:left;
+}
+#inLineLogout{
+	width: 90px;
+	float:left;
+	padding-top: 10px;
+	height: 20px;
+}
+.logoutIcon{
+	background: url(images/logoutIcon.png);
+	background-repeat: no-repeat;
+	width: 21px;
+	height: 20px;
+	float:left;
+}
+.textLogout a{
+	color: #0066A6;
+	width: 60px;
+	height: 20px;
+	float:left;
+	font-family: "Cooper Black", Verdana, Geneva, sans-serif;
+	font-size: 15px;
+	text-indent: 5px;
+}
+#rightWF{
+	width: 240px;
+	float:left;
+}
+#wellcomeDiv{
+	width: 240px;
+	height: 100px;
+	float: left;
+}
+.divBenvenuto{
+	background-color:#E3F1FA;
+	width: 110px;
+	text-indent: 10px;
+	height: 20px;
+    color: #0066A6;
+	font-family: "Cooper Black", Verdana, Geneva, sans-serif;
+	font-size:15px;
+	-webkit-border-radius: 6px 1px 6px 1px;
+	-khtml-border-radius: 6px 1px 6px 1px;	
+	-moz-border-radius: 6px 1px 6px 1px;
+	border-radius: 6px 1px 6px 1px;
+	float: left;
+}
+.textBenvenuto{
+	color: #0066A6;
+	width: 240px;
+	height: 20px;
+	font-family: "Cooper Black", Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	float: left;
+}
+.textUtente{
+	color:#E3F1FA;
+	width: 240px;
+	height: 25px;
+	font-family: "Cooper Black", Verdana, Geneva, sans-serif;
+	font-size:25px;
+	float: left;
+	padding-top: 15px;
+	text-indent: 10px;
+	text-transform: capitalize;
+}
+#inLineDate{
+	width: 130px;
+	float:left;
+	height: 15px;
+	position:relative;
+	top: 18px;
+	left: 110px;
+}
+.dateIcon{
+	background: url(images/dateIcon.png);
+	background-repeat: no-repeat;
+	width: 23px;
+	height: 20px;
+    float:left;
+	padding-left: 5px;
+}
+.textData{
+	color:#E3F1FA;
+	width: 100px;
+	height: 20px;
+	font-family: "Cooper Black", Verdana, Geneva, sans-serif;
+	font-size:15px;
+	float: left;
+	text-indent: 2px;
+}

@@ -1,0 +1,156 @@
+/* tables */
+table.tablesorter {
+	font-family:arial;
+	background-color: #CDCDCD;
+	font-size: 8pt;
+	text-align: left;
+	align="center"
+}
+#mainTable{
+	width: 100%;
+}
+#mainTable_wrapper{
+	width: 100%;
+	margin: 0px;
+}
+#mainTable_length{
+    bottom: 24px;
+    display: inline;
+    float: left;
+    left: 5px;
+    position: relative;
+}
+#mainTable_filter{
+	bottom: 25px;
+    display: inline;
+    margin-left: 320px;
+    position: relative;
+}
+#mainTable_info{
+    display: inline;
+    position: relative;
+    top: 22px;
+    float: left;
+    margin: 3px; 
+}
+#mainTable_paginate{
+	float: right;
+    position: relative;
+    top: 25px !important;
+    <!--[if gte IE 7]>top: 24px;<![endif]-->
+}
+
+/*INIZIO STILI DI PAGINAZIONE*/
+#mainTable_first{
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+    
+    background-color: white;
+    border: 3px solid white;
+    margin-right: 5px;
+}
+#mainTable_first:ahover{
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+    
+    background-color: white;
+    border: 3px solid white;
+    margin-right: 5px;
+}
+#mainTable_previous{
+	background-image: url("images/previus.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 20px;
+    width: 20px;
+}
+#mainTable_next{
+	background-image: url("images/next.png");
+    background-repeat: no-repeat;
+    float: left;
+    height: 20px;
+    width: 20px;
+}
+#mainTable_last{
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+    
+    background-color: white;
+    border: 3px solid white;
+    margin-right: 5px;
+}
+.fg-button{
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+    
+    background-color: white;
+    border: 3px solid white;
+    margin-right: 5px;
+}
+.art-article img, img.art-article {
+    border: 0 none;
+    left: 20px;
+    top:40px;
+    margin: 0;
+    position: relative;
+}
+
+/*FINE STILI DI PAGINAZIONE*/
+
+/*STILI RIDEFINITI GIA' PRESENTI IN style.css*/
+.art-PostMetadataHeader {
+    background-color: #98CFDD;
+    border: 1px solid #71BDD0;
+    height: 25px;
+    padding: 1px;
+    width: 100%;
+}
+
+
+
+
+#addImage{
+	position: relative;
+	left: 215px;
+}
+#editImage{
+}
+#delImage{
+	position: relative;
+	left: 225px;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #E3F1FA;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+	color: #4979AA;
+}
+table.tablesorter thead tr .header {
+	background-image: url(bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+
+}
